@@ -1,0 +1,30 @@
+<%- include ../layout/header -%>
+
+					<form action="/user/add" method="post" id="form-addUser">
+
+						<div class="col-md-6 col-md-offset-3 contact-right">
+
+							<h5>Nombres (*)</h5>
+							<input type="text" class="form-control" name="firstname" >
+							<h5>Apellidos (*)</h5>
+							<input type="text" class="form-control" name="lastname" >
+							<h5>Usuario (*)</h5>
+							<input type="text" class="form-control" name="username" >
+							<h5>Contraseña (*)</h5>
+							<input type="password" class="form-control" name="password" >
+							<h5>Rol (*)</h5>
+							<select class="form-control" name="role_id" id="combo-rol">
+							<% rols.forEach(function(rol) {%>
+								<option value="<%= rol.id %>">
+									<%= rol.name %>
+								</option>
+							<% }); %>
+							</select>
+							</br></br>
+							<button type="submit" class="btn btn-primary btn-lg" id="btn-addUser">Guardar</button>
+						</div>
+
+					</form>
+					
+	
+<%- include ../layout/footer -%>

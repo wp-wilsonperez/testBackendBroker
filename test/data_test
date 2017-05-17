@@ -1,0 +1,6 @@
+#### CREATE ONE USER
+
+db.users.insert({"firstname": "Dante", "lastname": "Cuevas", "username": "dante", "password": "40bd001563085fc35165329ea1ff5c5ecbdbbeef", "role_id": 1, "img": "user.jpg"});
+
+40bd001563085fc35165329ea1ff5c5ecbdbbeef = sha1('123');
+
